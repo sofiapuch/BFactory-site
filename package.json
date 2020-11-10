@@ -1,6 +1,12 @@
 {
   "name": "bfactory-site",
   "version": "0.1.0",
+  "description": "New site for BFactory CrossFit in Barcelona",
+  "homepage": "http://www.bfactorycrossfit.com/",
+  "author": {
+    "name": "Sofia Puch",
+    "url": "https://www.linkedin.com/in/sofiapuch/"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
