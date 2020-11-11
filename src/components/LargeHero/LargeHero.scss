@@ -1,17 +1,15 @@
 @import 'node_modules/foundation-sites/scss/foundation';
 
 $overlay-gradient-dark: #111317;
-$transparent: rgba(0, 0, 0, 0);
+$transparent: rgba(#111317, .2);
 
 .large-hero {
-    margin-bottom: rem(140);
+    height: 100vh;
+    overflow: hidden;
     position: relative;
 
-    @include breakpoint(medium) {
-        margin-bottom: rem(120);
-    }
-
     &__background-image {
+        // height: 100%;
         position: relative;
 
         &:after {
@@ -23,34 +21,38 @@ $transparent: rgba(0, 0, 0, 0);
             width: 100%;
 
             @include breakpoint(medium) {
-                background: linear-gradient(180deg, $transparent 30%, $overlay-gradient-dark 95%);
+                background: linear-gradient(180deg, $transparent 0%, $overlay-gradient-dark 95%);
             }
         }
 
-        .responsiveImage {
-            min-height: rem(500);
+        .responsive-image {
+            min-height: 500px;
             padding-bottom: 40%;
 
             @include breakpoint(medium) {
-                min-height: rem(640);
+                min-height: 640px;
             }
 
             @include breakpoint(large) {
-                min-height: rem(740);
+                min-height: 740px;
             }
         }
     }
 
     &__inner {
         left: 0;
+        margin-bottom: 120px;
         position: absolute;
         text-align: center;
-        top: 0;
+        top: 50%;
+        transform: translateY(-50%);
         width: 100%;
 
         @include breakpoint(medium) {
             bottom: 0;
             top: auto;
+            transform: translateY(0);
         }
+
     }
 }
