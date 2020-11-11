@@ -28,6 +28,10 @@ class App extends Component {
                     "Tram: Glories L1"
                 ],
                 phone: "+34 664 534 896"
+            },
+            social: {
+                instagram: "https://www.instagram.com/bfactory.crossfit/",
+                email: "mailto:info@bfactorycrossfit.com"
             }
         }
     }

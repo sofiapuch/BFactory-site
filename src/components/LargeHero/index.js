@@ -8,7 +8,7 @@ import './LargeHero.scss';
 
 const largeHero = (props) => {
 
-    const { heading, image, address } = props.heroContent;
+    const { heading, image, address, social } = props.heroContent;
 
     return (
         <div className="large-hero">
@@ -21,7 +21,7 @@ const largeHero = (props) => {
                         <div>LOGO HERE</div>
                         <Heading headingText={ heading } />
                         <Address address={ address } />
-                        <SocialLinks />
+                        <SocialLinks social={ social } />
                     </div>
                 </div>
             </div>
