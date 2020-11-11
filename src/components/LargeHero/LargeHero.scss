@@ -1,7 +1,6 @@
 @import 'node_modules/foundation-sites/scss/foundation';
 
 $overlay-gradient-dark: #111317;
-$text-color: #fff;
 $transparent: rgba(0, 0, 0, 0);
 
 .large-hero {
@@ -53,14 +52,5 @@ $transparent: rgba(0, 0, 0, 0);
             bottom: 0;
             top: auto;
         }
-    }
-
-    &__title,
-    &__subtitle {
-        color: $text-color;
-    }
-
-    &__title {
-        text-transform: uppercase;
     }
 }

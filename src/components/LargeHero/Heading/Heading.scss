@@ -1,0 +1,32 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+$text-color: #fff;
+
+.heading {
+    &__title {
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 42px;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+            font-size: 65px;
+            line-height: 66px;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        line-height: 26px;
+
+        @include breakpoint(medium) {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__title,
+    &__subtitle {
+        color: $text-color;
+    }
+}
