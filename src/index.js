@@ -3,13 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Foundation grid imports
-import './../node_modules/foundation-sites/dist/css/foundation.min.css';
-import './../node_modules/foundation-sites/dist/js/foundation.min.js';
-
-// Global styling imports
-import './styles/_global.scss';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Layout from './components/Layout/index';
 import LargeHero from './components/LargeHero/index';
 
+import './App.scss';
+
 import backgroundImage from './assets/cbfactory_background.jpg';
 
 class App extends Component {

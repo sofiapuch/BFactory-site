@@ -1,0 +1,13 @@
+$min-device-width: 320px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 1320px;
+$xlarge-breakpoint: 1600px;
+$xxlarge-breakpoint: 1921px;
+
+$breakpoints: (
+    small: 0,
+    medium: $medium-breakpoint,
+    large: $large-breakpoint,
+    xlarge: $xlarge-breakpoint,
+    xxlarge: $xxlarge-breakpoint,
+);
