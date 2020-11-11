@@ -1,15 +1,34 @@
 import React from 'react';
-import Aux from '../../../hoc/Aux';
+
+import pinSvg from '../../../assets/icons/pin.svg';
+import phoneSvg from '../../../assets/icons/phone.svg';
+import trainSvg from '../../../assets/icons/train.svg';
+
+import './Address.scss';
 
 const address = (props) => {
+
+    const { street, postcode, transport, phone } = props.address;
+
+
     return (
-        <Aux>
-            <p>Icon - Passatge de Vintro, 3</p>
-            <p>08026 Barcelona</p>
-            <p>Icon - Metro: L1 L2 Clot</p>
-            <p>Icon - Tram: Glories L1</p>
-            <p>Icon - +34 664 534 896</p>
-        </Aux>
+        <div className="address">
+
+            <div className="address__section">
+                <div className="icon"><img src={ pinSvg } alt="icon" /></div>
+                <p className="address__text">{ street } - { postcode }</p>
+            </div>
+
+            <div className="address__section">
+                <div className="icon"><img src={ trainSvg } alt="icon" /></div>
+                <p className="address__text">{ transport[0] } - { transport[1] }</p>
+            </div>
+
+            <div className="address__section">
+                <div className="icon"><img src={ phoneSvg } alt="icon" /></div>
+                <p className="address__text">{ phone }</p>
+            </div>
+        </div>
     )
 }
 

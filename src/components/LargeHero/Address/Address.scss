@@ -1,0 +1,19 @@
+.address {
+
+    &__section {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+
+        .icon {
+            height: 14px;
+            margin: -3px 5px 0 0;
+            width: 14px;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        font-size: 16px;
+    }
+}

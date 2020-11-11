@@ -8,7 +8,7 @@ import './LargeHero.scss';
 
 const largeHero = (props) => {
 
-    const { title, subtitle, image } = props.heroContent;
+    const { heading, image, address } = props.heroContent;
 
     return (
         <div className="large-hero">
@@ -19,8 +19,8 @@ const largeHero = (props) => {
                 <div className="large-hero__inner grid-x">
                     <div className="cell medium-8 medium-offset-2">
                         <div>LOGO HERE</div>
-                        <Heading title={title} subtitle={subtitle}/>
-                        <Address />
+                        <Heading headingText={ heading } />
+                        <Address address={ address } />
                         <SocialLinks />
                     </div>
                 </div>

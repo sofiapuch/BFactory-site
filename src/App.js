@@ -10,13 +10,24 @@ class App extends Component {
 
     state = {
         largeHero: {
-            title: "Where it all begins",
-            subtitle: "Coming to El Clot december 2020",
             image: {
                 smallUrl: backgroundImage,
                 largeUrl: backgroundImage,
                 fallbackImageUrl: backgroundImage,
                 altText: "Background Image"
+            },
+            heading: {
+                title: "Where it all begins",
+                subtitle: "Coming to El Clot december 2020"
+            },
+            address: {
+                street: "Passatge de Vintró, 3",
+                postcode: "08026 Barcelona",
+                transport: [
+                    "Metro: L1 L2 Clot",
+                    "Tram: Glories L1"
+                ],
+                phone: "+34 664 534 896"
             }
         }
     }
