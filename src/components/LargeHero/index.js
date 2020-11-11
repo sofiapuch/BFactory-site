@@ -1,5 +1,6 @@
 import React from 'react';
 import ResponsiveImage from '../ResponsiveImage/index';
+import CompanyLogo from './CompanyLogo/index';
 import Heading from './Heading/index';
 import Address from './Address/index';
 import SocialLinks from './SocialLinks/index';
@@ -18,7 +19,7 @@ const largeHero = (props) => {
             <div className="grid-container">
                 <div className="large-hero__inner grid-x">
                     <div className="cell medium-8 medium-offset-2">
-                        <div>LOGO HERE</div>
+                        <CompanyLogo />
                         <Heading headingText={ heading } />
                         <Address address={ address } />
                         <SocialLinks social={ social } />
