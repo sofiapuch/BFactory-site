@@ -1,0 +1,59 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+.large-hero {
+    height: 100vh;
+    /* mobile viewport bug fix */
+    height: -webkit-fill-available;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(900px) {
+        height: 100vh;
+    }
+
+    &__background-image {
+        height: 100%;
+        position: relative;
+
+        &:after {
+            background: linear-gradient(180deg, rgba(#111317, .2) 0%, rgba(#111317, .9) 80%, #111317 100%);
+            bottom: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            @include breakpoint(medium) {
+                background: linear-gradient(180deg, #111317 -20%, rgba(#111317, .2) 20%, rgba(#111317, .2) 30%, #111317 100%);
+            }
+        }
+
+        .responsive-image {
+            height: 100%;
+            min-height: 500px;
+            padding-bottom: 40%;
+
+            @include breakpoint(medium) {
+                min-height: 640px;
+            }
+
+            @include breakpoint(large) {
+                min-height: 740px;
+            }
+        }
+    }
+
+    &__inner {
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 100%;
+
+        @include breakpoint(medium) {
+            bottom: 120px;
+            top: auto;
+            transform: translateY(0);
+        }
+    }
+}

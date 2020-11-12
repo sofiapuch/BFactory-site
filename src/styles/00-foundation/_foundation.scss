@@ -1,0 +1,21 @@
+@import '../01-settings/_grid';
+@import '../01-settings/_breakpoints';
+
+$breakpoint-classes: (small medium large);
+
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-xy-grid-classes(
+    $base-grid: true,
+    $margin-grid: true,
+    $padding-grid: true,
+    $block-grid: flase,
+    $collapse: true,
+    $offset: true,
+    $vertical-grid: false,
+    $frame-grid: false
+);
+@include foundation-flex-classes;
+
+
+// Foundation Settings go here
+$xy-grid: true;

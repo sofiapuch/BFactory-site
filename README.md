@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+#BFactory Crossfit Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+New site for BFactory CrossFit in Barcelona created with React
+
+Production: http://www.bfactorycrossfit.com/
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
