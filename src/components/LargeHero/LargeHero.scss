@@ -2,11 +2,13 @@
 
 .large-hero {
     height: 100vh;
+    /* mobile viewport bug fix */
+    height: -webkit-fill-available;
     overflow: hidden;
     position: relative;
 
-    @include breakpoint(small only) {
-        height: -webkit-fill-available;
+    @include breakpoint(900px) {
+        height: 100vh;
     }
 
     &__background-image {
@@ -14,7 +16,7 @@
         position: relative;
 
         &:after {
-            background: linear-gradient(180deg, rgba(#111317, .2) 0%, #111317 105%);
+            background: linear-gradient(180deg, rgba(#111317, .2) 0%, rgba(#111317, .9) 80%, #111317 100%);
             bottom: 0;
             content: '';
             position: absolute;
