@@ -4,7 +4,7 @@ $primary-red: #e42e2e;
 
 .heading {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
     @include breakpoint(medium) {
         margin-bottom: 60px;
@@ -12,7 +12,7 @@ $primary-red: #e42e2e;
 
     &:after {
         background-color: $primary-red;
-        bottom: -30px;
+        bottom: -19px;
         content: '';
         filter: drop-shadow(1px 1px 1px rgba(17, 19, 23, .5));
         height: 2px;
@@ -20,27 +20,34 @@ $primary-red: #e42e2e;
         position: absolute;
         transform: translateX(-50%);
         width: 60px;
+
+        @include breakpoint(medium) {
+            bottom: -30px;
+        }
     }
 
     &__title {
         font-size: 38px;
         line-height: 42px;
-        margin: 25px 0 15px 0;
+        margin: 30px 10px 10px 10px;
 
         @include breakpoint(medium) {
             font-size: 65px;
             line-height: 66px;
+            margin: 30px 0 10px 0;
         }
     }
 
     &__subtitle {
-        font-size: 26px;
+        font-size: 20px;
         letter-spacing: .5px;
-        line-height: 30px;
+        line-height: 24px;
+        margin: 0 15px;
 
         @include breakpoint(medium) {
-            font-size: 24px;
-            line-height: 28px;
+            font-size: 26px;
+            line-height: 30px;
+            margin: 0;
         }
     }
 

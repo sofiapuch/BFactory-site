@@ -1,10 +1,28 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
 .address {
-    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @include breakpoint(small only) {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    &__block {
+        margin: 0 20px;
+    }
 
     &__text-wrapper {
         align-items: center;
         display: flex;
         margin-bottom: 10px;
+
+        @include breakpoint(small only) {
+            justify-content: center;
+            margin-bottom: 8px;
+        }
 
         .icon {
             height: 14px;
@@ -16,5 +34,23 @@
     &__text {
         color: #fff;
         font-size: 16px;
+
+        @include breakpoint(small only) {
+            font-size: 14px;
+        }
+
+        &--desktop {
+            @include breakpoint(small only) {
+                display: none;
+            }
+        }
+
+        &--mobile {
+            display: none;
+
+            @include breakpoint(small only) {
+                display: inline;
+            }
+        }
     }
 }

@@ -9,10 +9,11 @@ $transparent: rgba(#111317, .2);
     position: relative;
 
     &__background-image {
+        height: 100%;
         position: relative;
 
         &:after {
-            background: linear-gradient(180deg, $overlay-gradient-dark -20%, $transparent 20%, $transparent 30%, $overlay-gradient-dark 100%);
+            background: linear-gradient(180deg, rgba(#111317, .2) 0%, #111317 105%);
             bottom: 0;
             content: '';
             position: absolute;
@@ -20,13 +21,18 @@ $transparent: rgba(#111317, .2);
             width: 100%;
 
             @include breakpoint(medium) {
-                background: linear-gradient(180deg, $transparent 0%, $overlay-gradient-dark 95%);
+                // background: linear-gradient(180deg, $overlay-gradient-dark -20%, $transparent 20%, $transparent 30%, $overlay-gradient-dark 100%);
+                background: linear-gradient(180deg, red -20%, $transparent 20%, $transparent 30%, red 100%);
             }
         }
 
         .responsive-image {
             min-height: 500px;
             padding-bottom: 40%;
+
+            @include breakpoint(small only) {
+                height: 100%;
+            }
 
             @include breakpoint(medium) {
                 min-height: 640px;
@@ -39,18 +45,14 @@ $transparent: rgba(#111317, .2);
     }
 
     &__inner {
+        bottom: 0;
         left: 0;
-        margin-bottom: 120px;
+        margin-bottom: 30px;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         width: 100%;
 
-        @include breakpoint(medium) {
-            bottom: 0;
-            top: auto;
-            transform: translateY(0);
+        @include breakpoint(small only) {
+            margin-bottom: 20px;
         }
-
     }
 }
