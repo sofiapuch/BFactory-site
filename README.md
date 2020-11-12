@@ -1,4 +1,4 @@
-# BFactory Crossfit Site
+# BFactory CrossFit Site
 
 New site for BFactory CrossFit in Barcelona created with React
 
