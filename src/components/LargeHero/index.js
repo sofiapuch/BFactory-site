@@ -21,8 +21,8 @@ const largeHero = (props) => {
                     <div className="cell medium-8 medium-offset-2">
                         <CompanyLogo />
                         <Heading headingText={ heading } />
-                        <Address address={ address } />
                         <SocialLinks social={ social } />
+                        <Address address={ address } />
                     </div>
                 </div>
             </div>

@@ -1,16 +1,31 @@
 @import 'node_modules/foundation-sites/scss/foundation';
 
+$primary-red: #e42e2e;
+
 .heading {
+    position: relative;
     margin-bottom: 30px;
 
     @include breakpoint(medium) {
         margin-bottom: 60px;
     }
 
+    &:after {
+        background-color: $primary-red;
+        bottom: -30px;
+        content: '';
+        filter: drop-shadow(1px 1px 1px rgba(17, 19, 23, .5));
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 60px;
+    }
+
     &__title {
         font-size: 38px;
         line-height: 42px;
-        margin-bottom: 20px;
+        margin: 25px 0 15px 0;
 
         @include breakpoint(medium) {
             font-size: 65px;
@@ -19,9 +34,9 @@
     }
 
     &__subtitle {
-        font-size: 18px;
+        font-size: 26px;
         letter-spacing: .5px;
-        line-height: 26px;
+        line-height: 30px;
 
         @include breakpoint(medium) {
             font-size: 24px;
@@ -32,8 +47,9 @@
     &__title,
     &__subtitle {
         color: #fff;
-        filter: drop-shadow(1px 1px 1px rgba(17, 19, 23, .5));
+        filter: drop-shadow(1px 1px 1px rgba(17, 19, 23, .6));
         font-weight: 700;
+        text-align: center;;
         text-transform: uppercase;
     }
 }

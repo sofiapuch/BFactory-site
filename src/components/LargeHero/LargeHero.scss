@@ -9,7 +9,6 @@ $transparent: rgba(#111317, .2);
     position: relative;
 
     &__background-image {
-        // height: 100%;
         position: relative;
 
         &:after {
@@ -43,7 +42,6 @@ $transparent: rgba(#111317, .2);
         left: 0;
         margin-bottom: 120px;
         position: absolute;
-        text-align: center;
         top: 50%;
         transform: translateY(-50%);
         width: 100%;

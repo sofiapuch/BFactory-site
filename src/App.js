@@ -18,7 +18,7 @@ class App extends Component {
             },
             heading: {
                 title: "Where it all begins",
-                subtitle: "Coming to El Clot december 2020"
+                subtitle: "Coming to El Clot in december 2020"
             },
             address: {
                 street: "Passatge de Vintró, 3",
