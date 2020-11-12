@@ -14,7 +14,10 @@ class App extends Component {
                 smallUrl: backgroundImage,
                 largeUrl: backgroundImage,
                 fallbackImageUrl: backgroundImage,
-                altText: "Background Image"
+                altText: "Background Image",
+                caption: {
+                    description: "Photo by <a href='https://gverges.com/' target='blank' rel='noreferrer'>Guillem Vergés</a>"
+                }
             },
             heading: {
                 title: "Where it all begins",
