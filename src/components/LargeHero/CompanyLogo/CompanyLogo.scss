@@ -1,22 +1,20 @@
 @import 'node_modules/foundation-sites/scss/foundation';
 
 .company-logo {
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 150px;
 
-    .icon {
+    @include breakpoint(medium) {
+        width: 200px;
+    }
+
+    &__logo {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
         filter: drop-shadow(1px 1px 1px rgba(17, 19, 23, .6));
-        height: 100px;
-        width: 55px;
-
-        @include breakpoint(medium) {
-            height: 120px;
-            width: 80px;
-        }
-
-        img {
-            height: 100%;
-            width: auto;
-        }
+        margin-left: 15px;
+        padding-bottom: 100%;
     }
 }
