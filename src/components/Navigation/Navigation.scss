@@ -1,0 +1,15 @@
+$nav-height-desktop: 80px;
+$primary-dark: #0c0d0f;
+$white-text: #fff;
+
+.navigation {
+    color: $white-text;
+    align-items: center;
+    background-color: $primary-dark;
+    display: flex;
+    height: $nav-height-desktop;
+
+    &__logo {
+        width: 120px;
+    }
+}

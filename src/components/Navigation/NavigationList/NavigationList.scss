@@ -1,0 +1,16 @@
+@import 'node_modules/foundation-sites/scss/foundation'; 
+
+$custom-nav-breakpoint: 900px;
+
+.navigation-list {
+    display: none;
+
+    @include breakpoint($custom-nav-breakpoint) {
+        align-items: center;
+        display: flex;
+    }
+
+    &__item {
+        padding: 0 20px;
+    }
+}

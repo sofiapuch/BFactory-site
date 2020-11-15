@@ -1,14 +1,14 @@
 import React from 'react';
 import Aux from '../../hoc/Aux';
 
-// import Navigation from '../Navigation/index';
+import Navigation from '../Navigation/index';
 // import Footer from '../Footer/index';
 
 const layout = ( props ) => {
 
     return (
         <Aux>
-            {/* <Navigation /> */}
+            <Navigation />
             <main className="layout">
                 {props.children}
             </main>
