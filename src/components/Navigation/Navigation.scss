@@ -1,5 +1,7 @@
+@import 'node_modules/foundation-sites/scss/foundation'; 
+@import 'src/styles/01-settings/__import';
+
 $nav-height-desktop: 70px;
-$primary-dark: #0c0d0f;
 
 .navigation {
     align-items: center;
@@ -10,8 +12,12 @@ $primary-dark: #0c0d0f;
     padding: 0 40px;
 
     &__logo {
-        color: white;
+        color: map-get($colors, 'white');
         width: 120px;
+    }
+
+    &__burger-button {
+        color: map-get($colors, 'white');
     }
 
     &__main {

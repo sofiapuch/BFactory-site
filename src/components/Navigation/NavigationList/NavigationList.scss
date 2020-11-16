@@ -1,11 +1,8 @@
 @import 'node_modules/foundation-sites/scss/foundation'; 
+@import 'src/styles/01-settings/__import';
 
 $custom-nav-breakpoint: 900px;
 $nav-height-desktop: 70px;
-$white-text: #fff;
-$primary-dark: #0c0d0f;
-$dark-grey: lighten($primary-dark, 15%);
-$primary-red: #e42e2e;
 
 .navigation-list {
     display: none;
@@ -20,11 +17,10 @@ $primary-red: #e42e2e;
         height: 100%;
 
         &:hover {
-            background-color: $dark-grey;
+            background-color: lighten($primary-dark, 15%);
         }
 
         &.is-active {
-            // background-color: $dark-grey;
             position: relative;
 
             &:after {
@@ -41,7 +37,7 @@ $primary-red: #e42e2e;
 
     &__link {
         align-items: center;
-        color: $white-text;
+        color: map-get($colors, 'white');
         display: flex;
         font-size: 16px;
         height: 100%;

@@ -1,0 +1,10 @@
+/* Global colours named following https://chir.ag/projects/name-that-color */
+
+$colors: (
+    'crimson': #e42e2e,
+    'white': #fff,
+    'woodsmoke': #0c0d0f
+);
+
+$primary-red: map-get($colors, 'crimson');
+$primary-dark: map-get($colors, 'woodsmoke');
