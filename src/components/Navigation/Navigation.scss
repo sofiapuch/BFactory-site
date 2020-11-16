@@ -2,6 +2,7 @@
 @import 'src/styles/01-settings/__import';
 
 $nav-height-desktop: 70px;
+$custom-nav-breakpoint: 900px;
 
 .navigation {
     align-items: center;
@@ -18,6 +19,10 @@ $nav-height-desktop: 70px;
 
     &__burger-button {
         color: map-get($colors, 'white');
+
+        @include breakpoint($custom-nav-breakpoint) {
+            display: none;
+        }
     }
 
     &__main {

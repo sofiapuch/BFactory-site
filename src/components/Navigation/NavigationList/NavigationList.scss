@@ -3,14 +3,33 @@
 
 $custom-nav-breakpoint: 900px;
 $nav-height-desktop: 70px;
+$nav-height-mobile: 70px;
 
 .navigation-list {
+    $this: &;
     display: none;
     height: $nav-height-desktop;
 
     @include breakpoint($custom-nav-breakpoint) {
         align-items: center;
         display: flex;
+    }
+
+    &.slide-in {
+        background: $primary-dark;
+        border-top: 2px solid $primary-red;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: $nav-height-mobile;
+        width: 100%;
+        z-index: 25;
+
+        #{$this}__item {
+            height: 60px;
+        }
     }
 
     &__item {
@@ -24,13 +43,23 @@ $nav-height-desktop: 70px;
             position: relative;
 
             &:after {
-                background: $primary-red;
-                bottom: 0;
-                content: '';
-                left: 0;
-                height: 5px;
-                position: absolute;
-                width: 100%;
+                @include breakpoint($custom-nav-breakpoint) {
+                    background: $primary-red;
+                    bottom: 0;
+                    content: '';
+                    left: 0;
+                    height: 5px;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+
+            #{$this}__link {
+                text-decoration: underline;
+
+                @include breakpoint($custom-nav-breakpoint) {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -39,9 +68,13 @@ $nav-height-desktop: 70px;
         align-items: center;
         color: map-get($colors, 'white');
         display: flex;
-        font-size: 16px;
+        font-size: 18px;
         height: 100%;
         padding: 0 20px;
         text-decoration: none;
+
+        @include breakpoint($custom-nav-breakpoint) {
+            font-size: 16px;
+        }
     }
 }
