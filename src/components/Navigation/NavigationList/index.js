@@ -7,7 +7,11 @@ const navigationList = (props) => {
     return (
         <ul className="navigation-list">
             { props.linksList.map( ( link, index ) => {
-                return <li key={ index } className="navigation-list__item">{ link.label }</li>
+                return (
+                    <li key={ index } className={ link.isActive ? "navigation-list__item is-active" : "navigation-list__item" }>
+                        <a className="navigation-list__link" href="/">{ link.label }</a>
+                    </li>
+                )
             }) }
         </ul> 
     )

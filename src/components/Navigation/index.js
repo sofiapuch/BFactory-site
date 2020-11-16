@@ -7,7 +7,7 @@ class Navigation extends Component {
 
     state = {
         linkList: [
-            { label: 'About', isActive: false },
+            { label: 'About', isActive: true },
             { label: 'Classes', isActive: false },
             { label: 'Getting Started', isActive: false },
             { label: 'Membership', isActive: false },

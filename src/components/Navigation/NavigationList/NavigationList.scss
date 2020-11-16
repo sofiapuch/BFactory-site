@@ -1,9 +1,15 @@
 @import 'node_modules/foundation-sites/scss/foundation'; 
 
 $custom-nav-breakpoint: 900px;
+$nav-height-desktop: 70px;
+$white-text: #fff;
+$primary-dark: #0c0d0f;
+$dark-grey: lighten($primary-dark, 15%);
+$primary-red: #e42e2e;
 
 .navigation-list {
     display: none;
+    height: $nav-height-desktop;
 
     @include breakpoint($custom-nav-breakpoint) {
         align-items: center;
@@ -11,6 +17,35 @@ $custom-nav-breakpoint: 900px;
     }
 
     &__item {
+        height: 100%;
+
+        &:hover {
+            background-color: $dark-grey;
+        }
+
+        &.is-active {
+            // background-color: $dark-grey;
+            position: relative;
+
+            &:after {
+                background: $primary-red;
+                bottom: 0;
+                content: '';
+                left: 0;
+                height: 5px;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        align-items: center;
+        color: $white-text;
+        display: flex;
+        font-size: 16px;
+        height: 100%;
         padding: 0 20px;
+        text-decoration: none;
     }
 }
