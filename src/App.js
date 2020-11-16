@@ -4,16 +4,17 @@ import LargeHero from './components/LargeHero/index';
 
 import './App.scss';
 
-import backgroundImage from './assets/cbfactory_background.jpg';
+import backgroundImageSmall from './assets/background_image_small.jpg';
+import backgroundImageLarge from './assets/background_image_large.jpg';
 
 class App extends Component {
 
     state = {
         largeHero: {
             image: {
-                smallUrl: backgroundImage,
-                largeUrl: backgroundImage,
-                fallbackImageUrl: backgroundImage,
+                smallUrl: backgroundImageSmall,
+                largeUrl: backgroundImageLarge,
+                fallbackImageUrl: backgroundImageLarge,
                 altText: "Background Image",
                 caption: {
                     description: "Photo by <a href='https://gverges.com/' target='blank' rel='noreferrer'>Guillem Vergés</a>"
